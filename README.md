@@ -1,4 +1,4 @@
-![magnolia-logo](https://www.magnolia-cms.com/.imaging/mte/corporate-website-2017-theme/2700/dam/en/pages-app/www-en-intl/events/ES-developers-competition-2018/header_competicion_2160x1080_Eventbrite.jpg/jcr:content/header_2160x1080_Eventbrite.jpg)
+![magnolia-logo](https://raw.githubusercontent.com/dcaviedesAtsistemas/crypto-checker-magnolia/master/spa-react/example/src/img/header-img.jpg
 
 # Módulo Crypto-checker y SPA (Single-page application) ReactJS
 
@@ -38,4 +38,4 @@ Nota: el contexto del WAR desplegado debe ser "magnolia-webapp".
 
 ## Capturas :camera:
 
-![Tabla](https://raw.githubusercontent.com/DavidCaviedes/openexpo-app-monitoring/master/openexpo-app-monitoring/src/main/resources/img/details.png)
+![Tabla](https://raw.githubusercontent.com/dcaviedesAtsistemas/crypto-checker-magnolia/master/spa-react/example/src/img/spa.png)
