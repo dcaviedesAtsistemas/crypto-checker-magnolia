@@ -22,7 +22,7 @@ a través de una API REST configurada.
 
 Para mostrar estos datos tenemos una SPA construida con ReactJS, en tiempo real, recogerá los datos de las
 últimas 24H de nuestras cryptomonedas. Además podremos hacer uso de un formulario para subscribirse y recibir
-así los datos vía email.
+así los datos vía e-mail.
 
 ## Demo :bar_chart:
 
