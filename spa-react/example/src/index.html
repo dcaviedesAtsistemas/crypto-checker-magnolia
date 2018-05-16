@@ -1,0 +1,69 @@
+<!doctype html>
+<head>
+    <title>SPA ReactJS</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="col-md-12 container-fluid" style="max-height: 100%;">
+
+        <div class="row">
+          <div>
+            <img id="logo" src="/img/logo-magnolia.png">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" style="margin-left: 18.5%" id="app1"></div>
+            <div class="col-md-4" id="app2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" style="margin-left: 18.5%" id="app3"></div>
+            <div class="col-md-4" id="app4"></div>
+        </div>
+
+        <div class="row">
+            <section class="contact-wrap">
+                <form class="contact-form">
+                    <div class="col-sm-12" style="text-align:center;">
+                        <div style="margin-bottom: 5%">
+                            <h1 class="customH1">¿Quieres recibir estos datos en tu email?</h1>
+                            <br>
+                            <h1 class="customH1">¡Suscríbete ahora!</h1>
+                        </div>
+                    </div>
+                    <div class="col-sm-6" style="display: inline-block">
+                        <div class="input-block">
+                            <input type="text" class="form-control" placeholder="Email" id="userMail">
+                        </div>
+                    </div>
+                    <div class="col-sm-6"  style="display: inline-block">
+                        <button class="square-button" id="submitButton">Enviar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+    </div>
+</body>
+
+<script>
+  $("#submitButton").click(function (e) {
+      var var1 = $('#userMail').val();
+        e.preventDefault();
+        var datos = {"email":var1};
+
+		$.ajax({
+		type: "GET",
+		url:"http://localhost:8080/magnolia-webapp/.rest/crypto-rest/addEmail?email=" + var1,
+		success: function(datos){
+            $('#userMail').val('');
+			console.log("success");
+			alert(var1 + " subscribed");
+		}
+		});
+    });
+</script>

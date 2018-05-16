@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="commands">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>mgnl:content</sv:value>
+  </sv:property>
+  <sv:node sv:name="catalogApi">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:content</sv:value>
+    </sv:property>
+    <sv:node sv:name="apiCommand">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>mgnl:contentNode</sv:value>
+      </sv:property>
+      <sv:property sv:name="class" sv:type="String">
+        <sv:value>com.rd.commands.GetCryptoApiInformationCmd</sv:value>
+      </sv:property>
+    </sv:node>
+    <sv:node sv:name="sendCryptocurrenciesInfoMailCommand">
+      <sv:property sv:name="jcr:primaryType" sv:type="Name">
+        <sv:value>mgnl:contentNode</sv:value>
+      </sv:property>
+      <sv:property sv:name="class" sv:type="String">
+        <sv:value>com.rd.commands.SendCryptocurrenciesInfoMailCommand</sv:value>
+      </sv:property>
+      <sv:property sv:name="enabled" sv:type="String">
+        <sv:value>true</sv:value>
+      </sv:property>
+      <sv:property sv:name="from" sv:type="String">
+        <sv:value>sendCryptocurrenciesInfoMailCommand@rd-magnolia.com</sv:value>
+      </sv:property>
+      <sv:property sv:name="mailCommand" sv:type="String">
+        <sv:value>sendMail</sv:value>
+      </sv:property>
+      <sv:property sv:name="mailCommandCatalog" sv:type="String">
+        <sv:value>default</sv:value>
+      </sv:property>
+      <sv:property sv:name="mailTemplate" sv:type="String">
+        <sv:value>cryptocurrenciesInfo</sv:value>
+      </sv:property>
+      <sv:property sv:name="subject" sv:type="String">
+        <sv:value>crypto-checker-magnolia.templates.email.cryptocurrenciesInfo.subject</sv:value>
+      </sv:property>
+      <sv:property sv:name="to" sv:type="String">
+        <sv:value>cryptoSubscriber@yopmail.com</sv:value>
+      </sv:property>
+    </sv:node>
+  </sv:node>
+</sv:node>
+

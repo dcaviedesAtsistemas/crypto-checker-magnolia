@@ -1,0 +1,10 @@
+title: Crypto Checker Components
+templateScript: /react-graph-magnolia/templates/pages/main-page.ftl
+renderType: freemarker
+dialog: react-graph-magnolia:pages/main-page
+visible: true
+areas:
+  main:
+    availableComponents:
+      react-playground:
+        id: react-graph-magnolia:components/react-playground

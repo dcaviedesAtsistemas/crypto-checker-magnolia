@@ -1,0 +1,24 @@
+# Eclipse IDE: Archivos de configuracion
+.classpath
+.project
+.settings/
+.metadata/
+.sonarlint
+ 
+# Maven: Archivos compilados
+target/
+ 
+# Netbeans: Archivos de configuracion
+nbactions.xml
+Servers/
+.recommenders/
+
+# Proyectos propios
+
+spa-react/node_modules
+
+# Excluir todo lo contenido en la carpeta webapp menos la subcarpeta WEB-INF
+magnolia-webapp/src/main/webapp/cache
+magnolia-webapp/src/main/webapp/logs
+magnolia-webapp/src/main/webapp/repositories
+magnolia-webapp/src/main/webapp/tmp

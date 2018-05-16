@@ -1,0 +1,290 @@
+icon: icon-content-translation-app
+appClass: info.magnolia.ui.contentapp.ContentApp
+class: info.magnolia.ui.contentapp.ContentAppDescriptor
+theme: fixed
+label: Crypto Checker
+subApps:
+  browser:
+    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp
+    class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
+    actionbar:
+      defaultAction: editCrypto
+      sections:
+        - name: root
+          groups:
+            - name: addActions
+              items:
+                - name: addCrypto
+                - name: addFolder
+            - name: customActions
+              items:
+                - name: sendCryptocurrenciesInfo
+          availability:
+            nodes: false
+            root: true
+        - name: folder
+          groups:
+            - name: addActions
+              items:
+                - name: addCrypto
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editFolder
+                - name: deleteFolder
+          availability:
+            nodeTypes:
+              - mgnl:folder
+        - name: crypto
+          groups:
+            - name: editActions
+              items:
+                - name: editCrypto
+                - name: deleteCrypto
+            - name: activationActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: versionsActions
+              items:
+                - name: showVersions
+                - name: restoreVersion
+          availability:
+            nodeTypes:
+              - mgnl:cryptoNode
+        - name: category
+          groups:
+            - name: versionsActions
+              items:
+                - name: showVersions
+          availability:
+            nodeTypes:
+              - mgnl:cryptoNode
+           
+    actions:
+      addCrypto:
+        subAppId: detail
+        icon: icon-add-item
+        nodeType: mgnl:cryptoNode
+        appName: crypto-checker-magnolia
+        class: info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition
+        label: Add new virtual coin
+        availability:
+          root: true
+          nodeTypes:
+            - mgnl:folder
+      addFolder:
+        icon: icon-add-folder
+        class: info.magnolia.ui.framework.action.AddFolderActionDefinition
+        availability:
+          root: true
+      editFolder:
+        icon: icon-edit
+        dialogName: ui-framework:folder
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+      deleteFolder:
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.DeleteItemActionDefinition
+      editCrypto:
+        subAppId: detail
+        icon: icon-edit
+        appName: crypto-checker-magnolia
+        class: info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition
+        label: Edit crypto coin
+        availability:
+          nodeTypes:
+            - mgnl:cryptoNode
+      deleteCrypto:
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.DeleteItemActionDefinition
+        label: Delete crypto coin
+      showVersions:
+        icon: icon-show-versions
+        class: info.magnolia.ui.contentapp.browser.action.ShowVersionsActionDefinition
+        label: Show versions
+        availability:
+          rules:
+            HasVersionsRule:
+              implementationClass: info.magnolia.ui.framework.availability.HasVersionsRule
+      activate:
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        catalog: versioned
+        command: activate
+        icon: icon-publish
+        availability: 
+          writePermissionRequired: true
+          rules: 
+            IsNotDeletedRule: 
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      activateRecursive:
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        catalog: versioned
+        command: activate
+        asynchronous: true
+        icon: icon-publish-incl-sub
+        recursive: true
+        availability: 
+          writePermissionRequired: true
+          rules: 
+            IsNotDeletedRule: 
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      deactivate: 
+        class: info.magnolia.ui.framework.action.DeactivationActionDefinition
+        command: deactivate
+        icon: icon-unpublish
+        availability: 
+          writePermissionRequired: true
+          rules: 
+            IsNotDeletedRule: 
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+            IsPublishedRule: 
+              implementationClass: info.magnolia.ui.framework.availability.IsPublishedRule
+      delete: 
+        class: info.magnolia.ui.framework.action.MarkNodeAsDeletedActionDefinition
+        command: markAsDeleted
+        availability: 
+          writePermissionRequired: true
+      activateDeleted: 
+        catalog: versioned
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        command: activate
+        icon: icon-publish
+        availability: 
+          writePermissionRequired: true
+          rules: 
+            IsDeletedRule: 
+              implementationClass: info.magnolia.ui.framework.availability.IsDeletedRule
+      restorePreviousVersion: 
+        class: info.magnolia.ui.contentapp.detail.action.RestorePreviousVersionActionDefinition
+        icon: icon-undo
+        availability: 
+          writePermissionRequired: true
+          rules: 
+            IsDeletedRule: 
+              implementationClass: info.magnolia.ui.framework.availability.IsDeletedRule
+      restoreVersion: 
+        class: info.magnolia.ui.contentapp.browser.action.RestoreVersionActionDefinition
+        icon: icon-retrieve-versions
+        availability: 
+          writePermissionRequired: true
+          rules: 
+            HasVersionsRule: 
+              implementationClass: info.magnolia.ui.framework.availability.HasVersionsRule
+      sendCryptocurrenciesInfo:
+        catalog: catalogApi
+        command: sendCryptocurrenciesInfoMailCommand
+        asynchronous: true
+        parallel: false
+        notifyUser: false 
+        icon: icon-mail-setting
+        class: com.rd.actions.SendCryptoCurrenciesInfoActionDefinition
+        label: crypto-checker-magnolia.browser.actions.requestTranslation.label
+        availability:
+          root: true
+          
+        
+    workbench:
+      dropConstraintClass: info.magnolia.ui.workbench.tree.drop.AlwaysTrueDropConstraint
+      editable: false
+
+      contentViews:
+        - name: tree
+          class: info.magnolia.ui.workbench.tree.TreePresenterDefinition
+          columns: &myColumns
+            - name: name
+              editable: true
+              sortable: true
+              propertyName: jcrName
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: status
+              width: 45
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.StatusColumnFormatter
+              class: info.magnolia.ui.workbench.column.definition.StatusColumnDefinition
+            - name: moddate
+              width: 160
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.DateColumnFormatter
+              propertyName: mgnl:lastModified
+              class: info.magnolia.ui.workbench.column.definition.MetaDataColumnDefinition
+        - name: list
+          class: info.magnolia.ui.workbench.list.ListPresenterDefinition
+          columns: *myColumns
+        - name: thumbnail
+          class: info.magnolia.ui.workbench.thumbnail.ThumbnailPresenterDefinition
+        - name: search
+          class: info.magnolia.ui.workbench.search.SearchPresenterDefinition
+          columns: *myColumns
+
+    imageProvider:
+       class: info.magnolia.dam.app.ui.imageprovider.DamLinkImageProviderDefinition
+       damLinkPropertyName: image
+    contentConnector:
+      includeProperties: false
+      workspace: crypto
+      rootPath: /
+      defaultOrder: jcrName
+      nodeTypes:
+        - name: mgnl:cryptoNode
+          icon: icon-items
+        - name: mgnl:folder
+          icon: icon-folder
+  detail:
+    subAppClass: info.magnolia.ui.contentapp.detail.DetailSubApp
+    class: info.magnolia.ui.contentapp.detail.DetailSubAppDescriptor
+    actions:
+      commit:
+        implementationClass: info.magnolia.ui.form.action.SaveFormAction
+        class: info.magnolia.ui.form.action.SaveFormActionDefinition
+      cancel:
+        class: info.magnolia.ui.form.action.CancelFormActionDefinition
+    editor:
+      actions:
+        - name: commit
+        - name: cancel
+      form:
+        tabs:
+          - name: 
+            label: Header
+            fields:
+              - name: jcrName
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Node name
+              - name: fullName
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Full name
+              - name: symbol
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Symbol
+              - name: icon
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                label: Icon
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+              - name: eurValue
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Value (EUR)
+                readOnly: true
+              - name: usdValue
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Value (USD)
+                readOnly: true
+              - name: jpyValue
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Value (JPY)
+                readOnly: true                  
+      nodeType:
+        icon: icon-shape-circle-plus
+        name: mgnl:cryptoNode
+    contentConnector:
+      workspace: crypto
+permissions:
+  roles:
+    superuser: superuser
+    app-editor: app-editor

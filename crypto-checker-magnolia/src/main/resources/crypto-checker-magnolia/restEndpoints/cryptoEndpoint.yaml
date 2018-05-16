@@ -1,0 +1,10 @@
+class: info.magnolia.rest.delivery.jcr.v2.JcrDeliveryEndpointDefinition
+workspace: crypto
+depth: 1
+includeSystemProperties: false
+nodeTypes:
+  - mgnl:cryptoNode
+  - mgnl:asset
+childNodeTypes:
+  - mgnl:cryptoNode
+  - mgnl:asset

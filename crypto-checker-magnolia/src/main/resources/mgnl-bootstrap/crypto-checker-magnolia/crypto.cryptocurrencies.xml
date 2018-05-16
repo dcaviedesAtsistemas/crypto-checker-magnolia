@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="cryptocurrencies">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>mgnl:folder</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>27242b1a-6116-488d-98b4-40abdcbd2a9e</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:created" sv:type="Date">
+    <sv:value>2018-05-12T00:02:36.333+02:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:createdBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+    <sv:value>2018-05-12T00:02:43.685+02:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:node sv:name="bitcoin">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:cryptoNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>a8549d4d-c9b8-4067-8922-a1f0ddc3a95d</sv:value>
+    </sv:property>
+    <sv:property sv:name="eurValue" sv:type="String">
+      <sv:value>7028.61</sv:value>
+    </sv:property>
+    <sv:property sv:name="fullName" sv:type="String">
+      <sv:value>Bitcoin</sv:value>
+    </sv:property>
+    <sv:property sv:name="highDayEUR" sv:type="String">
+      <sv:value>7,576.84</sv:value>
+    </sv:property>
+    <sv:property sv:name="highDayUSD" sv:type="String">
+      <sv:value>9,032.27</sv:value>
+    </sv:property>
+    <sv:property sv:name="icon" sv:type="String">
+      <sv:value>jcr:7d8c3b4f-138c-426c-b77e-8d17cb009879</sv:value>
+    </sv:property>
+    <sv:property sv:name="jpyValue" sv:type="String">
+      <sv:value>938353.38</sv:value>
+    </sv:property>
+    <sv:property sv:name="lowDayEUR" sv:type="String">
+      <sv:value>6,990.46</sv:value>
+    </sv:property>
+    <sv:property sv:name="lowDayUSD" sv:type="String">
+      <sv:value>8,363.50</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2018-05-11T22:29:33.143+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2018-05-12T00:02:48.798+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="symbol" sv:type="String">
+      <sv:value>BTC</sv:value>
+    </sv:property>
+    <sv:property sv:name="totalVolume24H" sv:type="String">
+      <sv:value>480.83 K</sv:value>
+    </sv:property>
+    <sv:property sv:name="usdValue" sv:type="String">
+      <sv:value>8406.58</sv:value>
+    </sv:property>
+    <sv:property sv:name="values" sv:type="String">
+      <sv:value>[7079.9,7079.26,7076.1,7079.93,7079.56,7079.83,7077.91,7059.87,7049.21,7027.33,7029.83,7028.89,7022.85,7023.99,7037.81,7048.01,7052.88,7052.3,7044.13,7027.94,7029.76,7031.51,7034.5,7042.95,7044.65,7042.05,7042.83,7045.16,7041.87,7046.28,7042.04,7041.57,7036.1,7038.95,7036.23,7010.78,7006.92,7010.95,7008.09,6994.99,6992.81,6994.49,7001.07,7010.87,7037.96,7032.44,7034.02,7031.07,7026.69,7027.93,7029.03,7024.01,7028.61]</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="ethereum">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:cryptoNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>17281fe9-8c48-4397-a4ee-0090dd5590a1</sv:value>
+    </sv:property>
+    <sv:property sv:name="eurValue" sv:type="String">
+      <sv:value>558.78</sv:value>
+    </sv:property>
+    <sv:property sv:name="fullName" sv:type="String">
+      <sv:value>Ethereum</sv:value>
+    </sv:property>
+    <sv:property sv:name="highDayEUR" sv:type="String">
+      <sv:value>617.95</sv:value>
+    </sv:property>
+    <sv:property sv:name="highDayUSD" sv:type="String">
+      <sv:value>735.97</sv:value>
+    </sv:property>
+    <sv:property sv:name="icon" sv:type="String">
+      <sv:value>jcr:c7d346a4-69f8-4bfb-bb8a-b1e6d697a4bb</sv:value>
+    </sv:property>
+    <sv:property sv:name="jpyValue" sv:type="String">
+      <sv:value>72503.38</sv:value>
+    </sv:property>
+    <sv:property sv:name="lowDayEUR" sv:type="String">
+      <sv:value>556.48</sv:value>
+    </sv:property>
+    <sv:property sv:name="lowDayUSD" sv:type="String">
+      <sv:value>665.49</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2018-05-11T23:11:22.594+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2018-05-12T00:02:48.826+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="symbol" sv:type="String">
+      <sv:value>ETH</sv:value>
+    </sv:property>
+    <sv:property sv:name="totalVolume24H" sv:type="String">
+      <sv:value>2,214.60 K</sv:value>
+    </sv:property>
+    <sv:property sv:name="usdValue" sv:type="String">
+      <sv:value>669.23</sv:value>
+    </sv:property>
+    <sv:property sv:name="values" sv:type="String">
+      <sv:value>[565.97,565.88,563.45,561.87,560.31,561,560.55,560.29,560.39,561.8,562.65,563.98,563.47,563.35,561.37,561.68,561.89,562.44,561.78,562.33,561.67,562.23,562.41,561.63,561.97,562.02,561.4,561.39,561.01,560.88,559.96,559.31,558.66,557.92,557.63,557.92,557.05,556.82,558.07,558.64,560.25,560.54,560.23,560.4,559.67,559.08,559.05,558.78]</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="cardano">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:cryptoNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>79fed83f-490b-428c-9eaf-e657b548e66c</sv:value>
+    </sv:property>
+    <sv:property sv:name="eurValue" sv:type="String">
+      <sv:value>0.2127</sv:value>
+    </sv:property>
+    <sv:property sv:name="fullName" sv:type="String">
+      <sv:value>Cardano</sv:value>
+    </sv:property>
+    <sv:property sv:name="highDayEUR" sv:type="String">
+      <sv:value>0.2258</sv:value>
+    </sv:property>
+    <sv:property sv:name="highDayUSD" sv:type="String">
+      <sv:value>0.2939</sv:value>
+    </sv:property>
+    <sv:property sv:name="icon" sv:type="String">
+      <sv:value>jcr:ecb03987-aea4-44a2-a35b-34e8075ed46e</sv:value>
+    </sv:property>
+    <sv:property sv:name="jpyValue" sv:type="String">
+      <sv:value>28.51</sv:value>
+    </sv:property>
+    <sv:property sv:name="lowDayEUR" sv:type="String">
+      <sv:value>0.2065</sv:value>
+    </sv:property>
+    <sv:property sv:name="lowDayUSD" sv:type="String">
+      <sv:value>0.2479</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2018-05-11T23:18:13.657+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2018-05-12T00:02:48.838+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="symbol" sv:type="String">
+      <sv:value>ADA</sv:value>
+    </sv:property>
+    <sv:property sv:name="totalVolume24H" sv:type="String">
+      <sv:value>715.98 M</sv:value>
+    </sv:property>
+    <sv:property sv:name="usdValue" sv:type="String">
+      <sv:value>0.2527</sv:value>
+    </sv:property>
+    <sv:property sv:name="values" sv:type="String">
+      <sv:value>[0.2125,0.2125,0.2129,0.214,0.2137,0.2137,0.2136,0.2124,0.2123,0.2125,0.2127,0.2125,0.2131,0.213,0.2133,0.2135,0.2129,0.213,0.213,0.2127,0.2127,0.2125,0.212,0.2116,0.2124,0.2115,0.2113,0.2116,0.2117,0.2103,0.21,0.2102,0.2114,0.2131,0.2132,0.2131,0.2132,0.213,0.2127,0.2128,0.2127]</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="litecoin">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:cryptoNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>a2b621f5-4223-425a-9463-9c0ce0a9f8d5</sv:value>
+    </sv:property>
+    <sv:property sv:name="eurValue" sv:type="String">
+      <sv:value>112.56</sv:value>
+    </sv:property>
+    <sv:property sv:name="fullName" sv:type="String">
+      <sv:value>Litecoin</sv:value>
+    </sv:property>
+    <sv:property sv:name="highDayEUR" sv:type="String">
+      <sv:value>124.69</sv:value>
+    </sv:property>
+    <sv:property sv:name="highDayUSD" sv:type="String">
+      <sv:value>148.52</sv:value>
+    </sv:property>
+    <sv:property sv:name="icon" sv:type="String">
+      <sv:value>jcr:9df326f0-1f79-42e8-a157-afd502947f63</sv:value>
+    </sv:property>
+    <sv:property sv:name="jpyValue" sv:type="String">
+      <sv:value>15041.8</sv:value>
+    </sv:property>
+    <sv:property sv:name="lowDayEUR" sv:type="String">
+      <sv:value>111.76</sv:value>
+    </sv:property>
+    <sv:property sv:name="lowDayUSD" sv:type="String">
+      <sv:value>133.56</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2018-05-11T23:19:15.080+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2018-05-12T00:02:48.849+02:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="symbol" sv:type="String">
+      <sv:value>LTC</sv:value>
+    </sv:property>
+    <sv:property sv:name="totalVolume24H" sv:type="String">
+      <sv:value>2,935.77 K</sv:value>
+    </sv:property>
+    <sv:property sv:name="usdValue" sv:type="String">
+      <sv:value>134.61</sv:value>
+    </sv:property>
+    <sv:property sv:name="values" sv:type="String">
+      <sv:value>[113.22,113.29,113.31,113.28,113.28,113.51,113.32,113.23,113.22,113.2,113.2,113.23,113.23,113.31,113.32,113.31,113.29,113.29,113.25,113.19,113.01,113.03,112.93,112.88,112.84,112.39,112.14,112.15,111.86,111.95,112.03,112.36,112.55,112.56,112.66,112.64,112.64,112.6,112.5,112.56]</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>
+

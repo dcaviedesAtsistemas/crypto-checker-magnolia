@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="rest-endpoints">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>mgnl:content</sv:value>
+  </sv:property>
+  <sv:node sv:name="restCryptoEndpoint">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.rest.EndpointDefinition</sv:value>
+    </sv:property>
+    <sv:property sv:name="implementationClass" sv:type="String">
+      <sv:value>com.rd.endpoints.CryptoEndpoint</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>
+

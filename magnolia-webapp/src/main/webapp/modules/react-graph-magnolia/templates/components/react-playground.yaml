@@ -1,0 +1,4 @@
+title: Test
+renderType: freemarker
+templateScript: /react-graph-magnolia/templates/components/react-playground.ftl
+dialog: react-graph-magnolia:components/react-playground

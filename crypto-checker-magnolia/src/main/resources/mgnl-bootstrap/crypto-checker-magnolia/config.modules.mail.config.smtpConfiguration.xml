@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" sv:name="smtpConfiguration">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>mgnl:contentNode</sv:value>
+  </sv:property>
+  <sv:property sv:name="port" sv:type="String">
+    <sv:value>465</sv:value>
+  </sv:property>
+  <sv:property sv:name="security" sv:type="String">
+    <sv:value>ssl</sv:value>
+  </sv:property>
+  <sv:property sv:name="server" sv:type="String">
+    <sv:value>imap.gmail.com</sv:value>
+  </sv:property>
+  <sv:node sv:name="authentication">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="class" sv:type="String">
+      <sv:value>info.magnolia.module.mail.smtp.authentication.UsernamePasswordSmtpAuthentication</sv:value>
+    </sv:property>
+    <sv:property sv:name="passwordKeyStoreId" sv:type="String">
+      <sv:value>1cf81a37-0ce4-4e68-9042-32b37d11491a</sv:value>
+    </sv:property>
+    <sv:property sv:name="user" sv:type="String">
+      <sv:value>rdmagnolia2018atsistemas@gmail.com</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>
+

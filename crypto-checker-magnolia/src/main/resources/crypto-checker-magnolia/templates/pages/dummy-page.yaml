@@ -1,0 +1,10 @@
+templateScript: /crypto-checker-magnolia/templates/pages/dummy-page.ftl
+renderType: freemarker
+visible: true
+dialog: crypto-checker-magnolia:pages/dummy-page-properties
+areas:
+  main:
+    renderType: freemarker
+    availableComponents:
+      dummy-component:
+        id: crypto-checker-magnolia:components/dummy-component

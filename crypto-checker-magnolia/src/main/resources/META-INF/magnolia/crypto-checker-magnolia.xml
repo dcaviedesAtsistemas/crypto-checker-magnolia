@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module SYSTEM "module.dtd" >
+<module>
+	<name>crypto-checker-magnolia</name>
+	<displayName>${project.name}</displayName>
+	<description>${project.description}</description>
+	<class>com.rd.CryptoCheckerMagnolia</class>
+	<versionHandler>com.rd.setup.CryptoCheckerMagnoliaVersionHandler</versionHandler>
+	<version>${project.version}</version>
+
+	<components>
+		<id>main</id>
+		<component>
+			<type>com.rd.messages.magnoliaUI.MessagesUI</type>
+			<implementation>com.rd.messages.magnoliaUI.MgnlMessagesUI</implementation>
+		</component>
+	</components>
+	
+	<dependencies>
+		<dependency>
+			<name>core</name>
+			<version>5.6.4/*</version>
+		</dependency>
+		<dependency>
+			<name>ui-admincentral</name>
+			<version>5.6.4/*</version>
+		</dependency>
+		<dependency>
+			<name>scheduler</name>
+			<version>2.3.1/*</version>
+		</dependency>
+		<dependency>
+			<name>mail</name>
+			<version>5.5/*</version>
+		</dependency>
+		<dependency>
+			<name>password-manager</name>
+			<version>1.2/*</version>
+		</dependency>
+		<dependency>
+			<name>security-app</name>
+			<version>5.6.4/*</version>
+		</dependency>
+		<dependency>
+			<name>dam-app</name>
+			<version>2.3/*</version>
+		</dependency>
+		<!-- Add other dependencies here, e.g the mte (magnolia templating essentials). 
+			<dependency> <name>mte</name> <version>0.7/*</version> </dependency> -->
+	</dependencies>
+
+	<repositories>
+		<repository>
+			<name>magnolia</name>
+			<workspaces>
+				<workspace>crypto</workspace>
+			</workspaces>
+			<nodeTypeFile>/mgnl-nodetypes/magnolia-crypto-nodetypes.xml</nodeTypeFile>
+		</repository>
+	</repositories>
+
+</module>
+
+  
+  
