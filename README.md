@@ -1,4 +1,4 @@
-![magnolia-logo](https://raw.githubusercontent.com/dcaviedesAtsistemas/crypto-checker-magnolia/master/spa-react/example/src/img/header-img.jpg
+![magnolia-logo](https://raw.githubusercontent.com/dcaviedesAtsistemas/crypto-checker-magnolia/master/spa-react/example/src/img/header-img.jpg)
 
 # Módulo Crypto-checker y SPA (Single-page application) ReactJS
 
