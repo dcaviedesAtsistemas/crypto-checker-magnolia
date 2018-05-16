@@ -26,14 +26,15 @@ así los datos vía email.
 
 ## Demo :bar_chart:
 
-Si queremos probar el proyecto localmente debemos, en primer lugar, levantar nuestro proyecto Magnolia que servirá los datos a nuestra SPA. Este proyecto ya tiene configurada unas criptomonedas por defecto por lo que no es necesario configurar nada en Magnolia. Luego, desde el directorio `spa-react` ejecutaremos
+Si queremos probar el proyecto localmente debemos, en primer lugar, levantar nuestro proyecto Magnolia que servirá los datos a nuestra SPA. Este proyecto ya tiene configurada unas criptomonedas por defecto por lo que no es necesario configurar nada en Magnolia. Luego será necesario tener instalados en nuestro sistema NodeJS, NPM y Python, y entonces situados en el directorio `spa-react` desde una línea de comandos ejecutaremos
 
 ```bash
 npm install
 npm start
 ```
 
-Luego abriremos [`localhost:8000`](http://localhost:8000) en nuestro navegador.
+Luego abriremos [`localhost:8000`](http://localhost:8000) en nuestro navegador. Si vemos que no se dibujan las gráficas y en la consola del navegador muestra un fallo de CORS, instalaremos en nuestro navegador cualquier plugin para habilitar el CORS, aunque no debería ser necesario ya que está configurado un filtro en Magnolia para habilitar el CORS.
+Nota: el contexto del WAR desplegado debe ser "magnolia-webapp".
 
 ## Capturas :camera:
 
